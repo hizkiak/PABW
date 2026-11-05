@@ -1,0 +1,6 @@
+<div class="card"><div class="card-body">
+@foreach(['name' => 'Nama', 'email' => 'Email'] as $field => $label)<div class="mb-3"><label class="form-label" for="{{ $field }}">{{ $label }}</label><input id="{{ $field }}" name="{{ $field }}" value="{{ old($field, $user?->$field) }}" class="form-control @error($field) is-invalid @enderror">@error($field)<div class="invalid-feedback">{{ $message }}</div>@enderror</div>@endforeach
+<div class="mb-3"><label class="form-label" for="password">Kata sandi {{ $user ? '(kosongkan jika tidak diubah)' : '' }}</label><input id="password" type="password" name="password" class="form-control @error('password') is-invalid @enderror">@error('password')<div class="invalid-feedback">{{ $message }}</div>@enderror</div>
+<div class="mb-3"><label class="form-label" for="role">Role</label><select id="role" name="role" class="form-select @error('role') is-invalid @enderror"><option value="user" @selected(old('role', $user?->role?->value) === 'user')>User</option><option value="admin" @selected(old('role', $user?->role?->value) === 'admin')>Admin</option></select>@error('role')<div class="invalid-feedback">{{ $message }}</div>@enderror</div>
+<button class="btn btn-primary">Simpan</button> <a class="btn btn-light" href="{{ route('usermanagement.index') }}">Batal</a>
+</div></div>
