@@ -1,0 +1,1 @@
+{"name":"sipustaka/buku-module","autoload":{"psr-4":{"Modules\\Buku\\":"app/"}}}

@@ -1,0 +1,1 @@
+{"name":"sipustaka/user-management-module","autoload":{"psr-4":{"Modules\\UserManagement\\":"app/"}}}

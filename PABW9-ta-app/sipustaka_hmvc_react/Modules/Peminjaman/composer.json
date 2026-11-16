@@ -1,0 +1,1 @@
+{"name":"sipustaka/peminjaman-module","autoload":{"psr-4":{"Modules\\Peminjaman\\":"app/"}}}
